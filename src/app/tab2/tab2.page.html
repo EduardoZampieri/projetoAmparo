@@ -6,11 +6,40 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-header collapse="condense">
+  <ion-toolbar>
+    <ion-title size="large">Tab 2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <!-- botão de adicionar -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+
+    <!-- ícone inicial do botão principal -->
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+
+    <!-- tranformando o botão em um botão capaz de armazenar uma lista de outros botões -->
+    <ion-fab-list side="top">
+
+      <!-- características do primeiro botão apresentado na lista -->
+      <ion-fab-button>
+        <ion-icon name="camera-outline"></ion-icon>
+      </ion-fab-button>
+
+      <!-- características do segundo botão apresentado na lista -->
+      <ion-fab-button>
+        <!-- tranformando o ícone do youtube em um link que leva direto pra aba de asmr -->
+        <a href="https://www.youtube.com/results?search_query=asmr" target="_blank">
+          <ion-icon name="pencil-outline"></ion-icon>
+        </a>
+      </ion-fab-button>
+
+    </ion-fab-list>
+
+  </ion-fab>
 
 </ion-content>
